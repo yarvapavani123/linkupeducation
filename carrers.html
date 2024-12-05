@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="carrers.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="banner">
+    <header>
+        <div class="navbar">
+
+            <div class="logo">
+                <img src="logo.png">
+            </div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                    <li><a href="aboutus.html">About_us</a></li>
+                    <li><a href="parentaccount.html">Parent_account</a></li>
+                    <li><a href="contact.html"><button class="btn1">CONTACT US</button></a></li>
+                    <li><a href="login.html">Login</a></li>
+                
+                
+            </ul>
+        </div>
+    </header>
+    <div class="slider">
+      <div class="arrow left" onclick="prevSlide()">&#10094;</div>
+      <div class="slider-container">
+          <!-- Add your images with text on top here -->
+          <div class="image-slide">
+              <img src="https://cdn.pixabay.com/photo/2016/11/14/03/16/book-1822474_1280.jpg" alt="Motivation 1">
+              <div class="text-overlay1">"Stay Curious, Stay Hungry for Knowledge"</div>
+          </div>
+          <div class="image-slide">
+              <img src="https://freedesignfile.com/upload/2017/01/Classroom-Smiling-learning-children-HD-picture.jpg" alt="Motivation 2">
+              <div class="text-overlay2">"Education is a Journey, Not a Destination"</div>
+          </div>
+          <div class="image-slide">
+             
+              <img src="https://images.pexels.com/photos/4144294/pexels-photo-4144294.jpeg?cs=srgb&dl=pexels-julia-m-cameron-4144294.jpg&fm=jpg" alt="Motivation 3">
+              <div class="text-overlay3">"Education with Passion, Learning with Purpose"</div>
+          </div>
+          <div class="image-slide">
+              <img src="https://cdn.pixabay.com/photo/2023/01/30/15/36/school-7755985_1280.jpg" alt="Motivation 4">
+              <div class="text-overlay4">"Learning Today, Leading Tomorrow"</div>
+          </div>
+      </div>
+      <div class="arrow right" onclick="nextSlide()">&#10095;</div>
+  
+      <!-- Dots at the bottom -->
+      <div class="dots">
+          <span class="dot small-dot"></span>
+          <span class="dot medium-dot"></span>
+          <span class="dot large-dot"></span>
+          <span class="dot medium-dot"></span>
+          <span class="dot small-dot"></span>
+      </div>
+  
+      <!-- Play/Pause Button -->
+      <button class="pause-button" id="pauseButton" onclick="togglePause()">Pause</button>
+  </div>
+  
+  <script>
+      let currentIndex = 0;
+      const slides = document.querySelectorAll('.image-slide');
+      const dots = document.querySelectorAll('.dot');
+      let autoScrollInterval;
+      let isPaused = false;
+  
+      // Function to go to the previous slide
+      function prevSlide() {
+          currentIndex = (currentIndex === 0) ? slides.length - 1 : currentIndex - 1;
+          updateSlider();
+      }
+  
+      // Function to go to the next slide
+      function nextSlide() {
+          currentIndex = (currentIndex === slides.length - 1) ? 0 : currentIndex + 1;
+          updateSlider();
+      }
+  
+      // Update slider position and active dot
+      function updateSlider() {
+          const offset = -currentIndex * 100; // 100% of the width for each image (one image at a time)
+          document.querySelector('.slider-container').style.transform = `translateX(${offset}%)`;
+  
+          // Update dots
+          dots.forEach((dot, index) => {
+              dot.classList.remove('active');
+              if (index === currentIndex) {
+                  dot.classList.add('active');
+              }
+          });
+      }
+  
+      // Start automatic sliding
+      function startAutoScroll() {
+          autoScrollInterval = setInterval(nextSlide, 3000); // Change slide every 3 seconds
+      }
+  
+      // Pause or resume the auto-scrolling
+      function togglePause() {
+          if (isPaused) {
+              startAutoScroll();
+              document.getElementById('pauseButton').textContent = 'Pause';
+          } else {
+              clearInterval(autoScrollInterval);
+              document.getElementById('pauseButton').textContent = 'Play';
+          }
+          isPaused = !isPaused;
+      }
+  
+      // Initialize the slider
+      updateSlider();
+      startAutoScroll();
+  </script>
+  </div>
+    <div class="container">
+        <div class="content">
+            <h3>looking for a place to work, a family to join?</h3>
+            <h1>Careers</h1>
+            <div class="box">
+                <p>Looking for a place to work, a family to join?</p>
+                <h2>Careers</h2>
+                <p class="text">Meaningful work, constant learning, brilliant people, and a community guided by core values that promote quality, creativity and opportunity in everything we do. There are so many reasons to bring your career here.</p>
+                <div class="card">
+                    <div class="card1">
+                        <h3>Join LINKUPEDU Family To:</h3>
+                        <p>
+                              <strong>Be Part of Our Community</strong> – "Join LinkUpEducation – your gateway to limitless learning and growth. Together, we connect knowledge, opportunity, and success!"
+                        </p>
+                        <p>
+                            <strong>Exclusive Benefits</strong> – Gain access to early product previews, behind-the-scenes insights, 
+                            and be the first to hear about new developments.
+                        </p>
+                        <p>
+                            <strong>Your Voice Matters</strong> – As a member of the linkupedu family, your feedback and ideas 
+                            play a key role in shaping the future of our products and services.
+                        </p>
+                    </div>
+                    
+                    <div class="card2">
+                        <h3>Your Benefits:</h3>
+                        <p>
+                            <strong>Early Access to Innovation</strong> – Be the first to experience Linkupedu’s latest products 
+                            and gain exclusive insights into cutting-edge advancements.
+                        </p>
+                        <p>
+                            <strong>Growth and Networking Opportunities</strong> – Connect with a community of creators, 
+                            innovators, and professionals, opening doors to collaboration and skill development.
+                        </p>
+                        <p>
+                            <strong>Direct Influence</strong> – Your ideas and feedback help shape Linkupedu’s future, giving 
+                            you an active role in the evolution of our products and solutions.
+                        </p>
+                    </div>
+            </div>
+            </div>
+            <div class="horizontal-box-container">
+                <!-- .NET Development Box -->
+                <div class="horizontal-content-box">
+                  <div class="horizontal-image-section">
+                    <img src="https://t4.ftcdn.net/jpg/00/28/46/75/360_F_28467576_wuPsMwtN7hDd90XEmApk0yXuE76wLkI8.jpg" alt=".NET Development">
+                  </div>
+                  <div class="horizontal-description-section">
+                    <h2>Principle Job</h2>
+                    <p>
+                      The Principal leads the school, overseeing staff, curriculum, and operations to ensure a safe, inclusive, and high-quality learning environment. They manage budgets, foster community relations, and drive academic and institutional success.
+                    </p>
+                    <div class="container">
+                      <h4>Qualifications</h4>
+                      <ul>
+                        <li>A Master's degree in Education or a related field.</li>
+                        <li>Prior teaching and administrative experience.</li>
+                        <li>Strong leadership, communication, and organizational skills.</li>
+                        <li>Manage school operations, including budgets, schedules, and facilities.</li>
+                        
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="horizontal-apply-button">
+                    <a href="https://forms.gle/BSNwxaLkxsUGhjgF8">  <button>Apply</button></a>
+                  </div>
+                </div>
+            
+                <!-- Java Development Box -->
+                <div class="horizontal-content-box">
+                  <div class="horizontal-image-section">
+                    <img src="https://thumbs.dreamstime.com/b/english-courses-language-school-teacher-writing-chalkboard-122411332.jpg" alt="Java Development">
+                  </div>
+                  <div class="horizontal-description-section">
+                    <h2>English Teacher </h2>
+                    <p>
+                      The English Teacher creates engaging lessons to develop students' language and critical thinking skills. They evaluate progress, provide feedback, and inspire a love for literature. A supportive and dynamic learning environment is prioritized.
+                    </p>
+                    <div class="container">
+                      <h4>Skills Required</h4>
+                      <ul>
+                        <li> Strong verbal and written skills to teach language concepts clearly.</li>
+                        <li>Ability to maintain an organized, engaging, and disciplined environment.</li>
+                        <li>Crafting innovative lessons to inspire interest in language and literature.</li>
+                        <li>Evaluating student progress and providing constructive guidance.</li>
+                       
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="horizontal-apply-button">
+                    <a href="https://forms.gle/BSNwxaLkxsUGhjgF8">  <button>Apply</button></a>
+                  </div>
+                </div>
+            
+                <!-- QA Engineer Box -->
+                <div class="horizontal-content-box">
+                  <div class="horizontal-image-section">
+                    <img src="https://www.parents.com/thmb/Pw_vqnpu60ywMHIIBkhXMxyuOzo=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/GettyImages-1374490623-2000-7cc174778fb74fd78c62feed87afd2b8.jpg" alt="QA Engineer">
+                  </div>
+                  <div class="horizontal-description-section">
+                    <h2>Social Teacher</h2>
+                    <p>
+                      The Social Studies Teacher teaches history, geography, economics, and civics, designing lessons that help students understand society and cultures. They foster critical thinking, encourage discussion, and prepare students to be informed citizens.
+                    </p>
+                    <div class="container">
+                      <h4>Skills Required:</h4>
+                      <ul>
+                        <li>Deep understanding of history, geography, economics, and civics.</li>
+                        <li>Ability to develop students' analytical and problem-solving skills.</li>
+                        <li>Clear presentation of complex concepts and active classroom discussion.</li>
+                        <li>Using diverse teaching methods to keep students motivated & involved in learning.</li>
+                       
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="horizontal-apply-button">
+                    <a href="https://forms.gle/BSNwxaLkxsUGhjgF8">  <button>Apply</button></a>
+                  </div>
+                </div>
+            
+                <!-- DevOps Engineer Box -->
+                <div class="horizontal-content-box">
+                  <div class="horizontal-image-section">
+                    <img src="https://www.shutterstock.com/image-photo/asian-senior-high-school-female-600nw-1891943284.jpg" alt="DevOps Engineer">
+                  </div>
+                  <div class="horizontal-description-section">
+                    <h2>Maths Teacher</h2>
+                    <p>
+                      The Math Teacher teaches algebra, geometry, calculus, and statistics, designing lessons that develop problem-solving and critical thinking skills. They encourage analytical thinking and foster a positive attitude toward mathematics.
+                    </p>
+                    <div class="container">
+                      <h4>Skills Required:</h4>
+                      <ul>
+                        <li>Strong knowledge of various mathematical topics and techniques.</li>
+                        <li>Ability to guide students in solving complex mathematical problems.</li>
+                        <li> Encouraging students to think critically and logically.</li>
+                        <li> Ability to explain complex mathematical concepts clearly and engagingly.
+
+                        </li>
+                        
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="horizontal-apply-button">
+                    <a href="https://forms.gle/BSNwxaLkxsUGhjgF8">  <button>Apply</button></a>
+                  </div>
+                </div>
+            
+                <!-- Business Analyst Box -->
+                <div class="horizontal-content-box">
+                  <div class="horizontal-image-section">
+                    <img src="https://media.istockphoto.com/id/976329018/photo/high-school-students-with-tutor-using-microscope-in-biology-class.jpg?s=612x612&w=0&k=20&c=cQTqvH7_REvwrh_k6sJK5_QsXx3PxQpL2hORnGc38Z8=" alt="Business Analyst">
+                  </div>
+                  <div class="horizontal-description-section">
+                    <h2>Biology Teacher</h2>
+                    <p>
+                      The Biology Teacher teaches biological concepts like anatomy, genetics, and ecology, creating engaging lessons that promote understanding. They encourage scientific inquiry and foster a passion for life sciences through experiments and discussions.
+                    </p>
+                    <div class="container">
+                      <h4>Skills Required:</h4>
+                      <ul>
+                        <li>In-depth knowledge of biological sciences and principles.</li>
+                        <li> Ability to conduct experiments that demonstrate biological concepts.</li>
+                        <li>Guiding students to think analytically and explore biological phenomena.</li>
+                        <li>Clear presentation of complex biological concepts in an engaging way.</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="horizontal-apply-button">
+                    <a href="https://forms.gle/BSNwxaLkxsUGhjgF8">  <button>Apply</button></a>
+                  </div>
+                </div>
+            
+                <!-- Full Stack Developer Box -->
+                <div class="horizontal-content-box">
+                  <div class="horizontal-image-section">
+                    <img src="https://img.freepik.com/free-vector/school-physics-teacher-audience-class-lesson-blackboard-college-knowledge-learning-classroom-vector-illustration-flat-education-concept_1284-42698.jpg" alt="Full Stack Developer">
+                  </div>
+                  <div class="horizontal-description-section">
+                    <h2>Physics teacher</h2>
+                    <p>
+                      The Physics Teacher teaches principles of physics, including mechanics, electricity, and thermodynamics. They design lessons that promote understanding through experiments and problem-solving, fostering curiosity and a passion for science.
+                    </p>
+                    <div class="container">
+                      <h4>Skills Required:</h4>
+                      <ul>
+                        <li>Deep understanding of physics concepts and theories.</li>
+                        <li>Ability to conduct experiments that demonstrate key physics principles.</li>
+                        <li>Strong skills in guiding students through complex physics problems.</li>
+                        <li> Clear explanation of abstract concepts and engaging classroom discussions.
+
+                        </li>
+                       
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="horizontal-apply-button">
+                    <a href="https://forms.gle/BSNwxaLkxsUGhjgF8">  <button>Apply</button></a>
+                  </div>
+                </div>
+            
+                <!-- Data Science Developer Box -->
+                <div class="horizontal-content-box">
+                  <div class="horizontal-image-section">
+                    <img src="https://img.freepik.com/free-photo/portrait-professor-work-educational-system_23-2151737296.jpg" alt="Data Science Developer">
+                  </div>
+                  <div class="horizontal-description-section">
+                    <h2>Hindi teacher</h2>
+                    <p>
+                      The Hindi Teacher teaches reading, writing, speaking, and comprehension skills, creating engaging lessons on grammar, literature, and culture. They encourage participation and foster a love for the language.
+                      They build predictive models and extract insights for business decision-making.
+                    </p>
+                    <div class="container">
+                      <h4>Skills Required:</h4>
+                      <ul>
+                        <li>Strong command over Hindi grammar, vocabulary, and literature.</li>
+                        <li>Ability to convey complex concepts clearly in Hindi.</li>
+                        <li>Creative lesson plans that inspire interest in the language and culture.</li>
+                        <li> Knowledge of Hindi literature, history, and traditions to enrich lessons.</li>
+                        
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="horizontal-apply-button">
+                    <a href="https://forms.gle/BSNwxaLkxsUGhjgF8">  <button>Apply</button></a>
+                  </div>
+                </div>
+              </div>
+   
+        <script type="text/javascript">
+        window.addEventListener('scroll',function(){
+            const header = document.querySelector('header');
+            header.classList.toggle("sticky",window.scrollY > 0);
+        });
+        </script>
+        <script>
+            function navigate() {
+              // Get the selected value from the dropdown
+              const dropdown = document.getElementById("dropdown");
+              const selectedValue = dropdown.value;
+          
+              // If a valid value is selected, navigate to the URL
+              if (selectedValue) {
+                window.location.href = selectedValue;
+                
+                // Reset the dropdown to "About Us" after redirection
+                dropdown.value = "";
+              }
+            }
+          </script>
+</body>
+</html>

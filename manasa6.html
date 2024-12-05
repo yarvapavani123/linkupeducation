@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to LinkUpEdu</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f9f9f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .container {
+            position: relative;
+            text-align: center;
+            width: 100%;
+            height: 100%;
+        }
+
+        /* Thought Bubbles */
+        .thought {
+            position: absolute;
+            font-size: 1.5rem;
+            font-weight: bold;
+            padding: 20px;
+            color: white;
+            background: #db3854;
+            border-radius: 20px;
+            animation: moveToCenter 3s ease-in-out forwards;
+        }
+     
+       
+        .thought.student {
+            top: 20%;
+            left: 10%;
+        }
+
+        .thought.parent {
+            top: 70%;
+            left: 80%;
+            background: #4e73df;
+        }
+
+        @keyframes moveToCenter {
+            0% {
+                transform: translate(0, 0);
+            }
+            100% {
+                transform: translate(-50%, -50%);
+                top: 50%;
+                left: 50%;
+                opacity: 0;
+            }
+        }
+
+        /* Heart Animation */
+        .heart {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) scale(0);
+            font-size: 4rem;
+            color: #db3854;
+            animation: growHeart 3s ease-in-out forwards;
+        }
+
+        @keyframes growHeart {
+            0% {
+                transform: translate(-50%, -50%) scale(0);
+                opacity: 0;
+            }
+            50% {
+                transform: translate(-50%, -50%) scale(1.5);
+                opacity: 1;
+            }
+            100% {
+                transform: translate(-50%, -50%) scale(1);
+            }
+        }
+
+        /* Welcome Text */
+        .welcome-text {
+            position: absolute;
+            top: 65%;
+            left: 50%;
+            transform: translate(-50%, 50%);
+            font-size: 2rem;
+            font-weight: bold;
+            color: #333;
+            opacity: 0;
+            animation: fadeIn 3s ease-in-out forwards;
+            animation-delay: 3s;
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+                transform: translate(-50%, 50%);
+            }
+            100% {
+                opacity: 1;
+                transform: translate(-50%, 0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Thoughts -->
+        
+        <div class="thought student">🎮 Play Games</div>
+       
+        <div class="thought parent">📚 Is my child studying?</div>
+
+        <!-- Heart Symbol -->
+        <div class="heart">❤️</div>
+
+        <!-- Welcome Message -->
+        <div class="welcome-text">Welcome to LINKUPEDU ❤️</div>
+    </div>
+</body>
+</html>

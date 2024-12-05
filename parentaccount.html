@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parent Dashboard - LinkUp Education</title>
+    <link rel="stylesheet" href="parentaccount.css">
+</head>
+<body>
+    <div class="parent-account">
+        <!-- Header Section -->
+        <header>
+            <h1>LinkUp Education</h1>
+            <nav>
+                <a href="index.html"> <button class="btn1">Home</button></a>
+                <a href="dashboard.html">
+                    <button id="toggle-dashboard">Dashboard</button>
+                </a> 
+                <a href="notification.html">
+                    <button id="toggle-notification">Notifications</button>
+                </a>
+                <a href="login.html">
+                    <button onclick="logout()">Logout</button>
+                </a>
+            </nav>
+        </header>
+        <div class="main">
+        <div class="video1">
+            <video src="std.mp4" autoplay muted loop></video>
+        </div>
+        <div class="video2">
+            <video src="parent.mp4" autoplay muted loop></video>
+        </div>
+        <div class="container">
+            <!-- h1 will now appear with the welcome-text -->
+          
+            <!-- Heart Symbol -->
+            <div class="welcome-text">Welcome to LinkUp Education</div>
+            <div class="heart">❤️</div>
+            
+            <!-- Welcome Text -->
+           
+            
+            <!-- Additional Paragraph with info -->
+            <div class="info-text">
+                <span>Track</span> <span>your</span> <span>child's</span> <span>academic</span> <span>progress,</span>
+                <span>performance,</span> <span>and</span> <span>events</span> <span>at</span> <span>your</span> <span>fingertips.</span>
+            </div>
+            
+        </div>
+</div>
+
+        <div class="profile-container">
+            <!-- Student Profile Section -->
+            <section id="student-profile" class="profile-section">
+                <h2>Student Profile</h2>
+                <div class="card">
+                    <img src="studentprofile.jpeg" alt="Student" class="profile-img">
+                    <div class="info">
+                        <p><strong>Name:</strong> John Doe</p>
+                        <p><strong>Class:</strong> 10th Grade</p>
+                        <p><strong>Roll No:</strong> 23</p>
+                        <p><strong>Contact:</strong> +1234567890</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Parent Profile Section -->
+            <section id="parent-profile" class="profile-section">
+                <h2>Parent Profile</h2>
+                <div class="card">
+                    <img src="parentprofile.jpg" alt="Parent" class="profile-img">
+                    <div class="info">
+                        <p><strong>Name:</strong> Jane Doe</p>
+                        <p><strong>Phone:</strong> +1234567891</p>
+                        <p><strong>Address:</strong> 123 Main Street, Springfield</p>
+                        <p><strong>Job:</strong> Software Engineer</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <script>
+        // Example Logout Function
+        function logout() {
+            alert('You have been logged out.');
+            // Redirect to login page
+            window.location.href = "login.html";
+        }
+    </script>
+</body>
+</html>

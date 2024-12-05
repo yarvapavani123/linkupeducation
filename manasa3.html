@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+    color: #333;
+  }/* Header Styles */
+.topbar {
+    position: sticky;
+    top: 0;
+    z-index: 2000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #db3854;
+    padding: 10px 20px;
+    color: white;
+  }
+  
+  .logo-container {
+    display: flex;
+    align-items: center;
+  }
+  
+  .round-logo {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 10px;
+  }
+  
+  .nav-links a {
+    text-decoration: none;
+    color: white;
+    margin: 0 10px;
+    font-size: 1rem;
+  }
+  
+  .nav-links a:hover {
+    text-decoration: underline;
+  }
+  @keyframes fadeInSlideUp {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInSlideUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.container{
+    background-image: url("m3.jpg");
+    background-size: cover;
+ background-repeat: no-repeat;
+ min-height: 90vh;
+ width: 100%;
+    background-attachment: fixed;
+}
+/* ID Card Container */
+.id-card-container {
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 240px;
+    height: 340px;
+    perspective: 1000px; /* Adds 3D perspective */
+}
+
+/* ID Card */
+.id-card {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 1s ease-in-out; /* Smooth transition */
+    border-radius: 15px;
+}
+
+/* Hover Effect for Flip */
+.id-card-container:hover .id-card {
+    transform: rotateY(180deg); /* Trigger the flip on hover */
+}
+
+/* Card Front and Back */
+.id-card-front,
+.id-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden; /* Hides the back side during rotation */
+    border-radius: 15px;
+    border: 3px solid rgba(255, 255, 255, 0.8); /* Laminated border */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+/* Front Side */
+.id-card-front {
+    background: linear-gradient(135deg, #db3854, #d24b5f); /* Front background gradient */
+    color: white;
+    text-align: center;
+}
+
+.id-card-front img {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+    border: 2px solid white; /* Border around the photo */
+    transition: transform 0.4s ease-in-out; /* Add smooth zoom effect */
+}
+
+.id-card-front img:hover {
+    transform: scale(1.1); /* Zoom in photo on hover */
+}
+
+.id-card-front h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.id-card-front p {
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+
+/* Back Side */
+.id-card-back {
+    background: #f7f7f7; /* Back background color */
+    transform: rotateY(180deg);
+    text-align: center;
+    padding: 25px;
+    color: #333;
+    border: 3px solid #e0e0e0; /* Subtle border */
+}
+
+.id-card-back h3 {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    color: #444;
+    text-transform: uppercase;
+}
+
+.id-card-back p {
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+    font-weight: 400;
+    color: #555;
+}
+
+.id-card-back p:last-child {
+    margin-bottom: 0;
+}
+
+/* Adding Scale Effect */
+.id-card:hover {
+    transform: scale(1.05); /* Slightly enlarge the card on hover */
+}
+
+/* Rotating Animation for Idle State */
+@keyframes rotateCard {
+    0% {
+        transform: rotateY(0deg);
+    }
+    50% {
+        transform: rotateY(180deg);
+    }
+    100% {
+        transform: rotateY(360deg);
+    }
+}
+
+/* Optional: Add Idle Animation for Non-Interactive Scenarios */
+.id-card-container.idle .id-card {
+    animation: rotateCard 8s linear infinite; /* Continuous rotation for idle state */
+}
+
+
+    </style>
+</head>
+<body>
+    <header class="topbar">
+        <div class="logo-container">
+          <img src="logo.png" alt="Header Logo" class="round-logo">
+          <span class="site-name">LinkUpEdu</span>
+        </div>
+        <nav class="nav-links">
+          <a href="#aboutus">About Us</a>
+          <a href="parentaccount.html">Parent Account</a>
+          <a href="contact.html">Contact Us</a>
+          <a href="careers.html">Careers</a>
+          <a href="login.html">Login</a>
+        </nav>
+      </header>
+      <section>
+        <div class="container">
+            <div class="id-card-container">
+                <div class="id-card">
+                    <!-- Front Side -->
+                    <div class="id-card-front">
+                        <img src="m1.jpeg" alt="Student Photo">
+                        <h2>John Doe</h2>
+                        <p>Student ID: 123456</p>
+                        <p>Grade: 10</p>
+                        <p>School: LinkUp High</p>
+                    </div>
+        
+                    <!-- Back Side -->
+                    <div class="id-card-back">
+                        <h3>Additional Details</h3>
+                        <p>Address: 123 Main St, City</p>
+                        <p>Blood Group: O+</p>
+                        <p>Emergency Contact: +1 123-456-7890</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </section>
+</body>
+</html>

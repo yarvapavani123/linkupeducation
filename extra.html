@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="nextpage.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="main-content" id="mainContent" style="display: none;">
+        <header class="topbar">
+          <div class="logo-container">
+            <img src="logo.png" alt="Header Logo" class="round-logo">
+            <span class="site-name">LinkUpEdu</span>
+          </div>
+          <nav class="nav-links">
+            <a href="#about">About Us</a>
+            <a href="#contact">Contact Us</a>
+            <a href="#careers">Careers</a>
+            <a href="#login">Login</a>
+          </nav>
+        </header>
+          <div class="home-section">
+            <div class="home-content">
+    
+              
+              <h1 >Link Up Education</h1>
+              <h2>Your Child's Progress, at Your Fingertips</h2>
+            </div>
+            <div class="home-logo">
+              <img src="logo.jpg" alt="LinkUpEdu Logo">
+            </div>
+          </div>
+          <div class="slider">
+            <div class="arrow left" onclick="prevSlide()">&#10094;</div>
+            <div class="slider-container">
+                <!-- Add your 32 images here -->
+                <img src=" image/1.jpg" alt="Motivation 1">
+                <img src="image/2.jpg" alt="Motivation 1">
+                <img src="image/3.jpg" alt="Motivation 1">
+                <img src="image/4.png" alt="Motivation 1">
+                <img src="image/5.png" alt="Motivation 1">
+                <img src="image/6.png" alt="Motivation 1">
+                <img src="image/7.jpg" alt="Motivation 2">
+                <img src="image/8.jpg" alt="Motivation 3">
+                <img src="image/9.jpg" alt="Motivation 4">
+                <img src="image/10.jpg" alt="Motivation 5">
+                <img src="image/11.jpg" alt="Motivation 6">
+                <img src="image/12.jpg" alt="Motivation 7">
+                <img src="image/13.jpeg" alt="Motivation 8">
+                <img src="image/14.jpg" alt="Motivation 9">
+                <img src="image/15.jpg"  alt="Motivation 11">
+                <img src="image/16.png" alt="Motivation 12">
+                <img src="image/17.jpg" alt="Motivation 13">
+                <img src="image/18.jpg" alt="Motivation 14">
+                <img src="image/19.jpg" alt="Motivation 15">
+                <img src="image/20.jpg" alt="Motivation 16">
+                <img src="image/21.jpg" alt="Motivation 17">
+                <img src="image/21.png" alt="Motivation 18">
+                <img src="image/22.png" alt="Motivation 19">
+                <img src="image/23.jpg" alt="Motivation 20">
+                <img src="image/24.jpg" alt="Motivation 21">
+                <img src="image/25.jpg" alt="Motivation 22">
+                <img src="image/26.jpg" alt="Motivation 23">
+                <img src="image/27.jpg" alt="Motivation 24">
+                <img src="image/28.jpeg" alt="Motivation 25">
+                <img src="image/29.jpg" alt="Motivation 26">
+                <img src="image/30.jpeg" alt="Motivation 27">
+            </div>
+            <div class="arrow right" onclick="nextSlide()">&#10095;</div>
+            <div class="dots">
+                <!-- Only 5 dots visible at a time -->
+                <span class="dot small-dot"></span>
+                <span class="dot small-dot"></span>
+                <span class="dot medium-dot"></span>
+                <span class="dot large-dot"></span>
+                <span class="dot medium-dot"></span>
+                <span class="dot small-dot"></span>
+                <span class="dot small-dot"></span>
+            </div>
+        </div>
+    
+        <div class="vibe-section">
+          <div class="text">
+              <h2>Who We Are</h2>
+              <p>
+                  Welcome to Vibe! We are a passionate team dedicated to transforming businesses through innovative software solutions. Our mission is to empower organizations with user-friendly tools that drive success and efficiency. At Vibe, we believe in collaboration, integrity, and excellence, always striving to exceed expectations. Join us on this exciting journey as we harness the power of Virtual Intelligence and Bold Execution to help you achieve your goals!
+              </p>
+          </div>
+      </div>
+      <script>
+         function animateTextSection() {
+      const observer = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+              if (entry.isIntersecting) {
+                  // Reset the animation
+                  entry.target.classList.remove('animate');
+                  void entry.target.offsetWidth; // Trigger reflow
+                  entry.target.classList.add('animate'); // Reapply animation class
+              }
+          });
+      });
+    
+      // Observe the text section
+      const textSection = document.querySelector('.vibe-section .text');
+      observer.observe(textSection);
+    }
+    
+    // Run the function when the page loads
+    document.addEventListener("DOMContentLoaded", animateTextSection);
+    
+      </script>
+      
+      </div>
+      <h1>Meet the Team Behind the Magic</h1>
+      <div class="profiles-wrapper">
+          <div class="profile-container1">
+              <div class="profile-image">
+                  <img src="f.png" alt="Profile Image">
+              </div>
+              
+              <div class="profile-info">
+                  <h2>Jane Smith</h2>
+                  <p><strong>Email:</strong> jane.smith@example.com</p>
+                  <p><strong>Role:</strong> CTO</p>
+                  <p><strong>Location:</strong> Los Angeles, USA</p>
+                  <p><strong>Bio:</strong> An innovative leader with a passion for technology.</p>
+              </div>
+          </div>
+      
+          <div class="profile-container2">
+              <div class="profile-image">
+                  <img src="f.png" alt="Profile Image">
+              </div>
+              <div class="profile-info">
+                  <h2>Mike Johnson</h2>
+                  <p><strong>Email:</strong> mike.johnson@example.com</p>
+                  <p><strong>Role:</strong> CFO</p>
+                  <p><strong>Location:</strong> Chicago, USA</p>
+                  <p><strong>Bio:</strong> Financial expert with a focus on tech industry.</p>
+              </div>
+          </div>
+      
+          <div class="profile-container3">
+              <div class="profile-image">
+                  <img src="f.png" alt="Profile Image">
+              </div>
+              <div class="profile-info">
+                  <h2>Emma Brown</h2>
+                  <p><strong>Email:</strong> emma.brown@example.com</p>
+                  <p><strong>Role:</strong> COO</p>
+                  <p><strong>Location:</strong> Miami, USA</p>
+                  <p><strong>Bio:</strong> Operations leader with a drive for excellence.</p>
+              </div>
+          </div>
+      
+          <div class="profile-container4">
+              <div class="profile-image">
+                  <img src="f.png" alt="Profile Image">
+              </div>
+              <div class="profile-info">
+                  <h2>Mike Johnson</h2>
+                  <p><strong>Email:</strong> mike.johnson@example.com</p>
+                  <p><strong>Role:</strong> CFO</p>
+                  <p><strong>Location:</strong> Chicago, USA</p>
+                  <p><strong>Bio:</strong> Financial expert with a focus on tech industry.</p>
+              </div>
+          </div>
+      </div>
+    <script>
+     function animateOnScroll() {
+      const observer = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+              if (entry.isIntersecting) {
+                  // Reset animation by removing the class
+                  entry.target.classList.remove(entry.target.dataset.animate);
+                  
+                  // Re-trigger the animation
+                  void entry.target.offsetWidth; // Trigger reflow to restart the animation
+                  
+                  // Add the animation class to play the animation again
+                  entry.target.classList.add(entry.target.dataset.animate);
+              }
+          });
+      });
+    
+      // Set data-animate attribute for each container
+      document.querySelector('.profile-container1').setAttribute('data-animate', 'animate-top');
+      document.querySelector('.profile-container2').setAttribute('data-animate', 'animate-top');
+    
+      // Observe each container
+      const profileContainers = document.querySelectorAll('.profile-container1, .profile-container2');
+      profileContainers.forEach(container => observer.observe(container));
+    }
+    
+    // Run the function when the page loads
+    document.addEventListener("DOMContentLoaded", animateOnScroll);
+    
+    </script> 
+        
+    
+        <footer class="footer">
+          <img src="Nlogo.png" alt="Logo" class="footer-logo">
+          <div class="social-icons">
+            <div class="icon-container">
+              <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+              <div class="icon-label">Instagram</div>
+            </div>
+            <div class="icon-container">
+              <a href="mailto:your-email@example.com"><i class="fas fa-envelope"></i></a>
+              <div class="icon-label">Email</div>
+            </div>
+            <div class="icon-container">
+              <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+              <div class="icon-label">Facebook</div>
+            </div>
+            <div class="icon-container">
+              <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+              <div class="icon-label">Twitter</div>
+            </div>
+            <div class="icon-container">
+              <a href="https://www.linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+              <div class="icon-label">LinkedIn</div>
+            </div>
+          </div>
+          <div class="bottom-section">
+            <p><i class="fas fa-envelope"></i>Email: your-email@example.com</p>
+            <p><i class="fas fa-phone"></i>Phone: +123 456 7890</p>
+            <p class="pav"><i class="fas fa-map-marker-alt"></i>Location: Your Address Here</p>
+          </div>
+        </footer>
+      </div>
+    
+      <script src="script.js"></script>
+</body>
+</html>

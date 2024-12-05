@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Academic Calendar - LinkUp Education</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .calendar-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+
+        .calendar-table th, .calendar-table td {
+            padding: 12px;
+            text-align: center;
+            border: 1px solid #ddd;
+        }
+
+        .calendar-table th {
+            background-color: #0078d7;
+            color: white;
+        }
+
+        .calendar-table td {
+            height: 50px;
+        }
+
+        .important {
+            background-color: #f8d7da;
+            font-weight: bold;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+
+        button:hover {
+            background-color: #218838;
+        }
+
+        @media print {
+            body * {
+                visibility: hidden;
+            }
+
+            .calendar-table, .calendar-table * {
+                visibility: visible;
+            }
+
+            .calendar-table {
+                position: absolute;
+                left: 0;
+                top: 0;
+            }
+
+            button {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h2>Academic Calendar (2024)</h2>
+    <table class="calendar-table">
+        <thead>
+            <tr>
+                <th>Month</th>
+                <th>Event</th>
+                <th>Date</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>January</td>
+                <td>Semester Start</td>
+                <td>January 10</td>
+            </tr>
+            <tr>
+                <td>February</td>
+                <td>Mid-term Exams</td>
+                <td>February 20-22</td>
+            </tr>
+            <tr class="important">
+                <td>March</td>
+                <td>Spring Break</td>
+                <td>March 15-20</td>
+            </tr>
+            <tr>
+                <td>April</td>
+                <td>Project Submission</td>
+                <td>April 10</td>
+            </tr>
+            <tr>
+                <td>May</td>
+                <td>End of Semester Exams</td>
+                <td>May 5-10</td>
+            </tr>
+            <tr class="important">
+                <td>June</td>
+                <td>Semester Break</td>
+                <td>June 1 - July 15</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <button onclick="window.print()">Print Calendar</button>
+</body>
+</html>

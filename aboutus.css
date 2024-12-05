@@ -1,0 +1,194 @@
+/* General Reset */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    background: linear-gradient(to bottom, #f4f4f9, #e9f7ff);
+    color: #333;
+}
+
+/* About Us Section */
+.about-us-section {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+/* Heading Animations */
+.animated-heading {
+    font-size: 2.8rem;
+    color: #0078d7;
+    text-align: center;
+    animation: fade-in 2s ease-in-out;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    text-shadow: 2px 2px 5px rgba(0, 120, 215, 0.5);
+    margin-bottom: 10px;
+    transition: color 0.3s ease-in-out, text-shadow 0.3s ease-in-out;
+}
+
+.animated-heading:hover {
+    color: #1d72b8; /* Hover color change */
+    text-shadow: 2px 2px 5px rgba(29, 114, 184, 0.5); /* Hover shadow effect */
+}
+
+.animated-text {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #555;
+    animation: slide-in 2s ease-out;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    transition: color 0.3s ease-in-out;
+}
+
+.animated-text:hover {
+    color: #0078d7;
+}
+
+/* Keyframes for Animations */
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slide-in {
+    0% {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Team Section */
+.team-section {
+    text-align: center;
+    background:lightgrey;
+    padding: 20px;
+    border-radius: 15px;
+    margin-top: 20px;
+}
+
+.team-section h2 {
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+    color: #1d72b8;
+    animation: fade-in 2s ease-in-out;
+    letter-spacing: 1.2px;
+    text-shadow: 1px 1px 5px rgba(29, 114, 184, 0.5);
+    transition: color 0.3s ease-in-out;
+}
+
+.team-section h2:hover {
+    color: #0078d7; /* Hover color change */
+    text-shadow: 1px 1px 5px rgba(0, 120, 215, 0.5); /* Hover shadow effect */
+}
+
+/* Team Container */
+.team-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* Team Member Cards */
+.team-member {
+    background: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    padding: 20px;
+    width: 300px;
+    text-align: center;
+    transition: transform 0.4s ease, box-shadow 0.4s ease, background-color 0.3s ease;
+}
+
+.team-member:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+    background-color: #f7fbff;
+}
+
+/* Team Member Images */
+.image-container {
+    width: 120px;
+    height: 120px;
+    margin: 0 auto 15px auto;
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.image-container:hover {
+    transform: scale(1.1); /* Zoom effect */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.team-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Team Member Text */
+.team-member h3 {
+    font-size: 1.6rem;
+    color:red;
+    margin-bottom: 5px;
+    transition: color 0.3s ease-in-out;
+}
+
+.team-member h3:hover {
+    color: #1d72b8;
+}
+
+.team-member p {
+    font-size: 1rem;
+    margin: 5px 0;
+    color: #666;
+    transition: color 0.3s ease-in-out;
+}
+
+.team-member p:hover {
+    color: #0078d7;
+}
+
+.team-member strong {
+    color: #333;
+    transition: color 0.3s ease-in-out;
+}
+
+.team-member strong:hover {
+    color: #1d72b8;
+}
+
+/* Hover effect for paragraph and h1 */
+h1, p {
+    transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+h1:hover {
+    color: #0078d7; /* Hover color change for h1 */
+    transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+p:hover {
+    color: #555; /* Hover color change for p */
+    transform: translateX(5px); /* Slight move effect for paragraphs */
+}

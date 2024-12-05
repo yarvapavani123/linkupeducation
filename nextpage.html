@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="nextpage.css">
+    <title>Document</title>
+</head>
+<body>
+
+        <header class="topbar">
+          <div class="logo-container">
+            <img src="logo.png" alt="Header Logo" class="round-logo">
+            <span class="site-name">LinkUpEdu</span>
+          </div>
+          <nav class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="#aboutus">About_Us</a>
+            <a href="parentaccount.html">Parent Account</a>
+            <a href="contact.html">Contact_Us</a>
+            <a href="carrers.html">Careers</a>
+            <a href="login.html">Login</a>
+          </nav>
+        </header>
+        <section>
+          <div class="container">
+              <div class="id-card-container">
+                  <div class="id-card">
+                      <!-- Front Side -->
+                      <div class="id-card-front">
+                          <img src="m1.jpeg" alt="Student Photo">
+                          <h2>John Doe</h2>
+                          <p>Student ID: 123456</p>
+                          <p>Grade: 10</p>
+                          <p>School: LinkUp High</p>
+                      </div>
+          
+                      <!-- Back Side -->
+                      <div class="id-card-back">
+                          <h3>Additional Details</h3>
+                          <p>Address: 123 Main St, City</p>
+                          <p>Blood Group: O+</p>
+                          <p>Emergency Contact: +1 123-456-7890</p>
+                      </div>
+                  </div>
+              </div>
+          </div>
+        </section>
+      
+      
+       
+        <div class="vibe-section">
+            <div class="text">
+                <h2>What we do</h2>
+                <p>
+                   At LinkUp Education, we bridge the gap between parents, teachers, and students through a seamless, intuitive platform. Our solution empowers parents with real-time insights into their child’s overall progress. We provide tools for effective parent-teacher communication, a dynamic school calendar, and detailed analysis dashboards to keep everyone informed and connected. By fostering transparency and collaboration, we aim to enhance every child’s educational journey. Together, we create a stronger support system for student success.
+                </p>
+            </div>
+        </div>
+        <script>
+           function animateTextSection() {
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    // Reset the animation
+                    entry.target.classList.remove('animate');
+                    void entry.target.offsetWidth; // Trigger reflow
+                    entry.target.classList.add('animate'); // Reapply animation class
+                }
+            });
+        });
+    
+        // Observe the text section
+        const textSection = document.querySelector('.vibe-section .text');
+        observer.observe(textSection);
+    }
+    
+    // Run the function when the page loads
+    document.addEventListener("DOMContentLoaded", animateTextSection);
+    
+        </script>
+        
+        </div>
+        <div class="slider">
+          <div class="arrow left" onclick="prevSlide()">&#10094;</div>
+          <div class="slider-container">
+              <!-- Add your 32 images here -->
+              <img src=" 1.jpg" alt="Motivation 1">
+              <img src="2.jpg" alt="Motivation 1">
+              <img src="3.jpg" alt="Motivation 1">
+              <img src="4.jpg" alt="Motivation 1">
+              <img src="5.jpg" alt="Motivation 1">
+              <img src="6.png" alt="Motivation 1">
+              <img src="7.jpg" alt="Motivation 2">
+              <img src="8.jpg" alt="Motivation 3">
+              <img src="9.jpg" alt="Motivation 4">
+              <img src="10.jpg" alt="Motivation 5">
+              <img src="11.jpg" alt="Motivation 6">
+              <img src="12.jpg" alt="Motivation 7">
+              <img src="13.jpeg" alt="Motivation 8">
+              <img src="14.jpg" alt="Motivation 9">
+              <img src="15.jpg"  alt="Motivation 11">
+              <img src="16.png" alt="Motivation 12">
+              <img src="17.jpg" alt="Motivation 13">
+              <img src="18.jpg" alt="Motivation 14">
+              <img src="19.jpg" alt="Motivation 15">
+              <img src="20.jpg" alt="Motivation 16">
+              <img src="21.jpg" alt="Motivation 17">
+              <img src="22.jpg" alt="Motivation 18">
+              <img src="23.png" alt="Motivation 19">
+              <img src="23.jpg" alt="Motivation 20">
+              <img src="24.jpg" alt="Motivation 21">
+              <img src="25.jpg" alt="Motivation 22">
+              <img src="26.jpg" alt="Motivation 23">
+              <img src="27.jpg" alt="Motivation 24">
+              <img src="28.jpeg" alt="Motivation 25">
+              <img src="29.jpg" alt="Motivation 26">
+              <img src="30.jpeg" alt="Motivation 27">
+          </div>
+          <div class="arrow right" onclick="nextSlide()">&#10095;</div>
+          <div class="dots">
+              <!-- Only 5 dots visible at a time -->
+              <span class="dot small-dot"></span>
+              <span class="dot small-dot"></span>
+              <span class="dot medium-dot"></span>
+              <span class="dot large-dot"></span>
+              <span class="dot medium-dot"></span>
+              <span class="dot small-dot"></span>
+              <span class="dot small-dot"></span>
+          </div>
+      </div>
+      <div class="about-us-section" id="aboutus">
+        <div class="about-us-info">
+            <h1 class="animated-heading">About Link Up Education</h1>
+            <p class="animated-text">
+                Link Up Education is committed to enhancing the educational experience by bridging the gap between parents, teachers, 
+                and students. Our innovative platform provides real-time updates on students' progress, attendance, and performance, 
+                ensuring that education remains collaborative and transparent.
+            </p>
+        </div>
+        <div class="team-section">
+            <h2 class="animated-heading">Meet Our Team</h2>
+            <div class="team-container">
+                <!-- Team Member 1 -->
+                <div class="team-member">
+                    <div class="image-container">
+                        <img src="profile.jpg" alt="Team Member 1" class="team-image">
+                    </div>
+                    <h3>Jane Doe</h3>
+                    <p><strong>Phone:</strong> +1 (555) 123-4567</p>
+                    <p><strong>Email:</strong> jane.doe@example.com</p>
+                    <p><strong>Bio:</strong> Jane is a passionate educator with over 10 years of experience in creating innovative 
+                    educational solutions.</p>
+                </div>
+                <!-- Team Member 2 -->
+                <div class="team-member">
+                    <div class="image-container">
+                        <img src="profile.jpg" alt="Team Member 2" class="team-image">
+                    </div>
+                    <h3>John Smith</h3>
+                    <p><strong>Phone:</strong> +1 (555) 987-6543</p>
+                    <p><strong>Email:</strong> john.smith@example.com</p>
+                    <p><strong>Bio:</strong> John is a software engineer dedicated to building tools that empower educators and improve 
+                    learning outcomes.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+        
+           
+   
+    
+        <footer class="footer">
+          <img src="Nlogo.png" alt="Logo" class="footer-logo">
+          <div class="social-icons">
+            <div class="icon-container">
+              <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+              <div class="icon-label">Instagram</div>
+            </div>
+            <div class="icon-container">
+              <a href="mailto:your-email@example.com"><i class="fas fa-envelope"></i></a>
+              <div class="icon-label">Email</div>
+            </div>
+            <div class="icon-container">
+              <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+              <div class="icon-label">Facebook</div>
+            </div>
+            <div class="icon-container">
+              <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+              <div class="icon-label">Twitter</div>
+            </div>
+            <div class="icon-container">
+              <a href="https://www.linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+              <div class="icon-label">LinkedIn</div>
+            </div>
+          </div>
+          <div class="bottom-section">
+            <p><i class="fas fa-envelope"></i>Email: your-email@example.com</p>
+            <p><i class="fas fa-phone"></i>Phone: +123 456 7890</p>
+            <p class="pav"><i class="fas fa-map-marker-alt"></i>Location: Your Address Here</p>
+          </div>
+        </footer>
+      </div>
+    
+      <script src="script.js"></script>
+</body>
+</html>

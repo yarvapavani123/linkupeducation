@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notification System</title>
+    <link rel="stylesheet" href="notifications.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Notifications & Communication</h1>
+        </header>
+
+        <main>
+            <section class="notification-section">
+                <h2>Holiday Notifications</h2>
+                <ul>
+                    <li><strong>Christmas Break:</strong> December 24 - December 26</li>
+                    <li><strong>New Year's Day:</strong> January 1</li>
+                    <li><strong>Independence Day:</strong> August 15</li>
+                </ul>
+            </section>
+
+            <section class="notification-section">
+                <h2>Upcoming Events</h2>
+                <ul>
+                    <li><strong>Science Fair:</strong> February 10</li>
+                    <li><strong>Sports Day:</strong> March 5</li>
+                    <li><strong>Annual Day:</strong> April 20</li>
+                </ul>
+            </section>
+            <section class="notification-section">
+                <h2>Raise a Complaint</h2>
+                <textarea id="complaint-text" placeholder="Write your complaint here..."></textarea>
+                <button onclick="submitComplaint()">Submit Complaint</button>
+            </section>
+
+            <section class="notification-section">
+                <h2>Picnic Day</h2>
+                <p>Our next picnic day is scheduled for <strong>january 19</strong>. Venue: <em>Meadows Park</em>.</p>
+                <p>Our next picnic day is scheduled for <strong>April 10</strong>. Venue: <em>Green Meadows Park</em>.</p>
+            </section>
+
+            <section class="notification-section">
+                <h2>Chat with Teachers</h2>
+                <textarea id="chat-text" placeholder="Write your message here..."></textarea>
+                <button onclick="sendMessage()">Send Message</button>
+                <div class="chat-response" id="chat-response"></div>
+            </section>
+        </main>
+    </div>
+
+    <script >
+        // Submit Complaint
+function submitComplaint() {
+    const complaintText = document.getElementById('complaint-text').value.trim();
+    if (complaintText === '') {
+        alert('Please enter a complaint.');
+        return;
+    }
+    alert('Your complaint has been submitted successfully.');
+    document.getElementById('complaint-text').value = ''; // Clear the textarea
+}
+
+// Send Message
+function sendMessage() {
+    const chatText = document.getElementById('chat-text').value.trim();
+    if (chatText === '') {
+        alert('Please enter a message.');
+        return;
+    }
+    const chatResponse = document.getElementById('chat-response');
+    chatResponse.innerHTML = `<strong>Teacher:</strong> Thank you for your message. We'll get back to you shortly.`;
+    chatResponse.style.display = 'block'; // Show the response
+    document.getElementById('chat-text').value = ''; // Clear the textarea
+}
+
+    </script>
+</body>
+</html>

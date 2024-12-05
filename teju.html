@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Word-by-Word Animation</title>
+    <style>
+        /* Base styles for welcome-text */
+        .welcome-text {
+            font-size: 2rem;
+            text-align: center;
+            margin-top: 20px;
+            animation: fadeInWelcome 2s ease-in-out forwards;
+        }
+
+        /* Animation for welcome-text */
+        @keyframes fadeInWelcome {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Base styles for .info-text */
+        .info-text {
+            font-size: 1.4rem;
+            padding-top: 50px;
+            color: #555;
+            margin-top: 180px;
+            margin-left: -430px;
+            text-align: center;
+            white-space: normal;
+            opacity: 0; /* Hidden initially */
+            animation: fadeInParagraph 2s ease-in-out forwards;
+            animation-delay: 3s; /* Delayed to follow the welcome-text */
+        }
+
+        /* Animation for .info-text */
+        @keyframes fadeInParagraph {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Welcome text -->
+        <div class="welcome-text">Welcome to LinkUp Education</div>
+
+        <!-- Info text -->
+        <div class="info-text">
+            Track your child's academic progress, performance, and events at your fingertips.
+        </div>
+    </div>
+</body>
+</html>

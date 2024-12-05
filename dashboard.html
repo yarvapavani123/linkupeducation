@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parent Dashboard - LinkUp Education</title>
+    <link rel="stylesheet" href="dashboard.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="parent-account">
+        <!-- Header Section -->
+        <header>
+            <h1>LinkUp Education</h1>
+            <nav>
+                <button id="toggle-dashboard" onclick="toggleDashboard()">Dashboard</button>
+                <button onclick="showNotifications()">Notifications</button>
+                <button onclick="logout()">Logout</button>
+            </nav>
+        </header>
+
+        <section id="dashboard">
+            <h2>Dashboard</h2>
+            <div class="dashboard-section attendence">
+                <h3>Attendance</h3>
+                <ul>
+                    <li><a href="daily.xlsm" target="_blank">Daily Attendance</a></li>
+                    <li><a href="monthly.xlsx" target="_blank">Monthly Attendance</a></li>
+                    <li><a href="2.-School-Attendance-Sheet-Yearly.xlsx" target="_blank">yearly Attendance</a></li>
+                   
+                </ul>
+            </div>
+            <div class="dashboard-section subjects">
+                <h3>Subjects</h3>
+                <ul>
+                    <li>Marks: <a href="exam-results-list-excel-table.xlsx" target="_blank">View Marks</a></li>
+                    <li>Reference Books: <a href="https://www.google.com/url?sa=t&source=web&rct=j&opi=89978449&url=https://www.schandpublishing.com/booklisting/higher-education/general-reference-books&ved=2ahUKEwixvcPhk4GKAxUq8qACHU78DzYQFnoECCEQAQ&usg=AOvVaw0rXpAg_tauUeKiXj80awhT" target="_blank">See books</a></li>
+                    <li>Feedback & Tips: <a href="students.pdf" target="_blank">Read More</a></li>
+                </ul>
+            </div>
+            <div class="dashboard-section message">
+                <h3>Messages</h3>
+                <textarea placeholder="Write a message to the teacher..."></textarea>
+                <button onclick="sendMessage()">Send</button>
+            </div>
+            <div class="dashboard-section">
+                <h3>Calendar</h3>
+                <iframe src="calender.html" style="width:100%; height: 300px;" frameborder="0"></iframe>
+            </div>
+            <div class="dashboard-section chart-container">
+                <h3>Overall Analysis</h3>
+                <canvas id="performance-chart"></canvas>
+            </div>
+        </section>
+
+    
+
+    <script>
+        // Toggle Dashboard Visibility
+        function toggleDashboard() {
+            const dashboard = document.getElementById('dashboard');
+            console.log('Current display state:', dashboard.style.display);
+            if (dashboard.style.display === 'none' || dashboard.style.display === '') {
+                dashboard.style.display = 'block';
+            } else {
+                dashboard.style.display = 'none';
+            }
+        }
+
+        // Show Notifications
+        function showNotifications() {
+            const notifications = document.getElementById('notifications');
+            notifications.style.display = notifications.style.display === 'none' ? 'block' : 'none';
+        }
+
+        // Logout
+        function logout() {
+            alert('You have logged out.');
+            window.location.reload();
+        }
+
+        // Send Message
+        function sendMessage() {
+            alert('Message sent to the teacher.');
+        }
+
+        // Chart for Overall Analysis
+        document.addEventListener('DOMContentLoaded', () => {
+            const ctx = document.getElementById('performance-chart').getContext('2d');
+            new Chart(ctx, {
+                type: 'line',
+                data: {
+                    labels: ['January', 'February', 'March', 'April'],
+                    datasets: [{
+                        label: 'Performance',
+                        data: [70, 85, 80, 90],
+                        borderColor: '#0078d7',
+                        backgroundColor: 'rgba(0, 120, 215, 0.2)',
+                    }]
+                },
+                options: {
+                    responsive: true,
+                }
+            });
+        });
+    </script>
+</body>
+</html>
